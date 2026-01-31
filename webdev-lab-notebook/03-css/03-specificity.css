@@ -1,25 +1,35 @@
 /* Specificity Exercise */
 
+/*I ranked each selection from least (1/6) to most (6/6) specific, with 
+  (nav .list-item > a) and section .main::first-line having the same 
+  specificity (3/6) and there are no selections with the 4/6 spot.*/
+
 nav .list-item > a {
+  /*(0,1,2)   <-- 3/6 third least specific)*/
   color: var(--purple);
 }
 
 #main::first-letter {
+  /*(1,0,1)   <-- 5/6 (second most specific*/
   color: var(--purple);
 }
 
 input[type] {
+  /*(0,1,1)   <-- 2/6 (second least specific)*/
   color: var(--purple);
 }
 
 section .main::first-line {
+  /*(0,1,2)   <-- 3/6 (third least specific)*/
   color: var(--purple);
 }
 
 nav ul.menu li#first a:not([class='visited']) {
+  /*(1,2,4)   <-- 6/6 (most specific)*/
   color: var(--purple);
 }
 
 div ol li ul li ol li ul li a {
+  /*(0,0,10)  <-- 1/6 (least specific)*/
   color: var(--purple);
 }
