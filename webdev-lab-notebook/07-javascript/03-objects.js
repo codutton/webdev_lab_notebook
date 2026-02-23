@@ -7,14 +7,14 @@ const insertItem = (key, value) => {
 
 const deleteItem = (key) => {
   // remove the property with key from result
-  delete result(key);
+  delete result[key];
 };
 
 const lookupItem = (key) => {
   // return the value from result that is associated with key
 
   if (result.hasOwnProperty(key)) {
-    return result(key);
+    return result[key];
   }
 
   return 'Item does not exist';
@@ -22,7 +22,7 @@ const lookupItem = (key) => {
 
 const printItems = () => {
   // return a string of the concatenated key in result, separated by commas
-  return objects.keys(result).join(', ');
+  return Object.keys(result).join(', ');
 };
 
 insertItem('hello', 'world');
