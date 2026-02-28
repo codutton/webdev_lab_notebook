@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../.."
+	},
+	{
+		"path": "../../../code_samples_repo"
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "lab_notebook_repo"
+  }
+}
